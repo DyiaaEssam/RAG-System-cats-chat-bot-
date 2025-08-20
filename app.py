@@ -47,7 +47,7 @@ def home():
     if request.method == "POST":
         query = request.form.get("query")
 
-        # 🔥 هنا بندمج RAG system
+        
         retrieved_knowledge = retrieve(query)
         instruction_prompt = f"""You are a helpful chatbot.
 Use only the following pieces of context to answer the question. Don't make up any new information:
@@ -190,3 +190,4 @@ Use only the following pieces of context to answer the question. Don't make up a
 
 if __name__ == "__main__":
     app.run(debug=True)
+
